@@ -20,6 +20,8 @@
   }
   header h1{margin:0 0 6px; font-size:1.9rem;}
   header p{margin:0; color:var(--muted);}
+  header .tagline{line-height:1.7;}
+  header .tagline strong{color:var(--price); font-size:1.15rem;}
   .wrap{max-width:920px; margin:0 auto; padding:10px 16px 60px;}
 
   /* card grid (good for phones) */
@@ -36,6 +38,10 @@
     aspect-ratio:4/3; overflow:hidden;
   }
   .card .imgbox img{width:100%; height:100%; object-fit:cover;}
+  .card.wide{grid-column:1 / -1;}
+  /* Free items: show the FULL image (no cropping), capped height */
+  .card.free .imgbox{aspect-ratio:auto; height:auto; padding:12px;}
+  .card.free .imgbox img{width:auto; height:auto; max-width:100%; max-height:300px; object-fit:contain;}
   .card .body{padding:14px 16px 16px;}
   .card h2{margin:0 0 8px; font-size:1.15rem;}
   .card .desc{color:var(--muted); font-size:.92rem; margin:0 0 12px;}
@@ -53,12 +59,79 @@
 </head>
 <body>
   <header>
-    <h1>Moving Sale · 搬家清仓</h1>
-    <p>Everything must go · 价格可议，先到先得</p>
+    <h1>Moving Soon</h1>
+    <!-- <p class="tagline"><strong>Everything must go before we move!</strong><br> -->
+    <!-- Take a few items for a bigger discount — or just reach out and we'll work out a price that's fair for you.<br> -->
+    <p class="tagline"><strong>可免费，价格可议。希望都能遇到下一个珍惜它们的人。</strong></p>
   </header>
 
   <div class="wrap">
     <div class="grid">
+
+      <!-- Free items first 免费物品放最前 -->
+      <div class="card free">
+        <div class="imgbox"><img src="images/健身凳.jpeg" alt="Fitness bench 健身凳"></div>
+        <div class="body">
+          <h2>Fitness Bench · 健身凳</h2>
+          <div class="meta">
+            <span class="price">Free · 免费</span>
+            <span class="badge avail">Available 可拿</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card free">
+        <div class="imgbox"><img src="images/竹鞋架.jpeg" alt="Bamboo shoe rack 竹鞋架"></div>
+        <div class="body">
+          <h2>Bamboo Shoe Rack · 竹鞋架</h2>
+          <div class="meta">
+            <span class="price">Free · 免费</span>
+            <span class="badge avail">Available 可拿</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card wide free">
+        <div class="imgbox"><img src="images/免费书架.jpeg" alt="Free bookshelf 免费书架"></div>
+        <div class="body">
+          <h2>Free Bookshelf · 免费书架</h2>
+          <div class="meta">
+            <span class="price">Free · 免费</span>
+            <span class="badge avail">Available 可拿</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Standing desks next, side by side for easy comparison 升降桌并排方便对比 -->
+      <div class="card">
+        <div class="imgbox"><img src="images/black_desk.jpeg" alt="Black standing desk 黑色升降桌"></div>
+        <div class="body">
+          <h2>Black Standing Desk · 黑色升降桌</h2>
+          <p class="desc">
+            Height-adjustable desk. 140 cm long × 70 cm wide.<br>
+            可升降桌。长 140cm，宽 70cm。
+          </p>
+          <div class="meta">
+            <span class="price">$50</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/white_desk.jpeg" alt="White standing desk 白色升降桌"></div>
+        <div class="body">
+          <h2>White Standing Desk · 白色升降桌</h2>
+          <p class="desc">
+            Height-adjustable desk. 140 cm long × 60 cm wide.<br>
+            可升降桌。长 140cm，宽 60cm。
+          </p>
+          <div class="meta">
+            <span class="price">$45</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
 
       <div class="card">
         <div class="imgbox"><img src="images/treadmill.jpg" alt="Foldable treadmill 折叠跑步机"></div>
@@ -110,36 +183,6 @@
       </div>
 
       <div class="card">
-        <div class="imgbox"><img src="images/black_desk.jpeg" alt="Black standing desk 黑色升降桌"></div>
-        <div class="body">
-          <h2>Black Standing Desk · 黑色升降桌</h2>
-          <p class="desc">
-            Height-adjustable desk. 140 cm long × 70 cm wide.<br>
-            可升降桌。长 140cm，宽 70cm。
-          </p>
-          <div class="meta">
-            <span class="price">$50</span>
-            <span class="badge avail">Available 可购</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="imgbox"><img src="images/white_desk.jpeg" alt="White standing desk 白色升降桌"></div>
-        <div class="body">
-          <h2>White Standing Desk · 白色升降桌</h2>
-          <p class="desc">
-            Height-adjustable desk. 140 cm long × 60 cm wide.<br>
-            可升降桌。长 140cm，宽 60cm。
-          </p>
-          <div class="meta">
-            <span class="price">$45</span>
-            <span class="badge avail">Available 可购</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
         <div class="imgbox"><img src="images/bookShelf.jpeg" alt="Solid wood bookshelf 实木书架"></div>
         <div class="body">
           <h2>Solid Wood Bookshelf · 实木书架</h2>
@@ -158,7 +201,8 @@
   </div>
 
   <footer>
-    Contact me if interested · 有兴趣请联系我
+    Interested? Just reach out · 有兴趣随时联系我<br>
+    WeChat 微信: <strong>JingYiHarper</strong> &nbsp;·&nbsp; Email 邮箱: <a href="mailto:jing@jing-yi.org">jing@jing-yi.org</a>
   </footer>
 </body>
 </html>
