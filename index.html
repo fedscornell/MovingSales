@@ -28,6 +28,14 @@
   .grid{display:grid; grid-template-columns:1fr; gap:18px;}
   @media(min-width:640px){.grid{grid-template-columns:1fr 1fr;}}
 
+  /* category section heading spanning the full width */
+  .section-head{
+    grid-column:1 / -1; margin:18px 0 -4px; padding-bottom:6px;
+    border-bottom:2px solid var(--line); font-size:1.15rem; font-weight:700;
+  }
+  .section-head:first-child{margin-top:0;}
+  .section-head .en{color:var(--muted); font-weight:600; font-size:.95rem;}
+
   .card{
     background:var(--card); border:1px solid var(--line); border-radius:14px;
     overflow:hidden; display:flex; flex-direction:column;
@@ -68,7 +76,9 @@
   <div class="wrap">
     <div class="grid">
 
-      <!-- Free items first 免费物品放最前 -->
+      <!-- ===== FREE 免费 ===== -->
+      <h2 class="section-head">免费 <span class="en">· Free</span></h2>
+
       <div class="card wide free">
         <div class="imgbox"><img src="images/免费书架.jpeg" alt="Free bookshelf 免费书架"></div>
         <div class="body">
@@ -102,7 +112,82 @@
         </div>
       </div>
 
-      <!-- Standing desks side by side for easy comparison 升降桌并排方便对比 -->
+      <!-- ===== PIANO 钢琴 (first in paid) ===== -->
+      <h2 class="section-head">钢琴 <span class="en">· Piano</span></h2>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/piano_1.jpeg" alt="Yamaha C3 grand piano 雅马哈C3三角钢琴"></div>
+        <div class="body">
+          <h2>Yamaha C3 Grand Piano · 雅马哈 C3 三角钢琴</h2>
+          <p class="desc">
+            Full-size concert-grade grand piano. Serial #353万.<br>
+            全尺寸演奏厅级别钢琴。编码：353万。
+          </p>
+          <div class="meta">
+            <span class="price">$12,500</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== APPLIANCES 家电 (fridges grouped) ===== -->
+      <h2 class="section-head">家电 <span class="en">· Appliances</span></h2>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/小冰箱_1.jpeg" alt="Mini fridge 小冰箱"></div>
+        <div class="body">
+          <h2>Mini Fridge · 小冰箱</h2>
+          <div class="meta">
+            <span class="price">$35</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/冰柜0.jpeg.jpeg" alt="Refrigerator with freezer 冰箱冷冻"></div>
+        <div class="body">
+          <h2>Refrigerator (with Freezer) · 冰箱（冷冻）</h2>
+          <p class="desc">
+            One small surface scratch from delivery — doesn't affect use.<br>
+            表面有一处划痕，不影响正常使用（新买时纸箱搬运中剐蹭所致）。
+          </p>
+          <div class="meta">
+            <span class="price">$45</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/冰柜.jpeg" alt="Chest freezer 冰柜"></div>
+        <div class="body">
+          <h2>Freezer · 冰柜</h2>
+          <div class="meta">
+            <span class="price">$20</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/microwave.jpeg" alt="Microwave 微波炉"></div>
+        <div class="body">
+          <h2>Microwave · 微波炉</h2>
+          <p class="desc">
+            1000 W high power.<br>
+            1000 瓦大功率。
+          </p>
+          <div class="meta">
+            <span class="price">$30</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== FURNITURE 家具 ===== -->
+      <h2 class="section-head">家具 <span class="en">· Furniture</span></h2>
+
       <div class="card">
         <div class="imgbox"><img src="images/black_desk.jpeg" alt="Black standing desk 黑色升降桌"></div>
         <div class="body">
@@ -132,6 +217,24 @@
           </div>
         </div>
       </div>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/bookShelf.jpeg" alt="Solid wood bookshelf 实木书架"></div>
+        <div class="body">
+          <h2>Solid Wood Bookshelf · 实木书架</h2>
+          <p class="desc">
+            90 cm wide × 200 cm tall each.<br>
+            每个宽 90cm，高 200cm。
+          </p>
+          <div class="meta">
+            <span class="price">$20 each · $20/个</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== FITNESS 健身器材 ===== -->
+      <h2 class="section-head">健身器材 <span class="en">· Fitness</span></h2>
 
       <div class="card">
         <div class="imgbox"><img src="images/treadmill.jpeg" alt="Foldable treadmill 折叠跑步机"></div>
@@ -167,6 +270,9 @@
         </div>
       </div>
 
+      <!-- ===== STORAGE 收纳 ===== -->
+      <h2 class="section-head">收纳 <span class="en">· Storage</span></h2>
+
       <div class="card">
         <div class="imgbox"><img src="images/shoe-rack.jpeg" alt="11-tier shoe rack 11层鞋架"></div>
         <div class="body">
@@ -177,47 +283,6 @@
           </p>
           <div class="meta">
             <span class="price">$15 each · $30 for both<br><span style="font-weight:400;color:var(--muted);font-size:.85rem">$15/个，$30 两个</span></span>
-            <span class="badge avail">Available 可购</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="imgbox"><img src="images/bookShelf.jpeg" alt="Solid wood bookshelf 实木书架"></div>
-        <div class="body">
-          <h2>Solid Wood Bookshelf · 实木书架</h2>
-          <p class="desc">
-            90 cm wide × 200 cm tall each.<br>
-            每个宽 90cm，高 200cm。
-          </p>
-          <div class="meta">
-            <span class="price">$20 each · $20/个</span>
-            <span class="badge avail">Available 可购</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="imgbox"><img src="images/小冰箱_1.jpeg" alt="Mini fridge 小冰箱"></div>
-        <div class="body">
-          <h2>Mini Fridge · 小冰箱</h2>
-          <div class="meta">
-            <span class="price">$35</span>
-            <span class="badge avail">Available 可购</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="imgbox"><img src="images/microwave.jpeg" alt="Microwave 微波炉"></div>
-        <div class="body">
-          <h2>Microwave · 微波炉</h2>
-          <p class="desc">
-            1000 W high power.<br>
-            1000 瓦大功率。
-          </p>
-          <div class="meta">
-            <span class="price">$30</span>
             <span class="badge avail">Available 可购</span>
           </div>
         </div>
@@ -251,6 +316,39 @@
           <h2>9-Tier Drawer (×9) · 9层抽屉（9个）</h2>
           <div class="meta">
             <span class="price">$10 each · $10/个</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/柜子.jpeg" alt="Cabinet 柜子"></div>
+        <div class="body">
+          <h2>Cabinet · 柜子</h2>
+          <div class="meta">
+            <span class="price">$8</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/九宫格.jpeg" alt="9-cube organizer 九宫格"></div>
+        <div class="body">
+          <h2>9-Cube Organizer · 九宫格</h2>
+          <div class="meta">
+            <span class="price">$10</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/小推车.jpeg" alt="Utility cart 小推车"></div>
+        <div class="body">
+          <h2>Utility Cart · 小推车</h2>
+          <div class="meta">
+            <span class="price">$8</span>
             <span class="badge avail">Available 可购</span>
           </div>
         </div>
