@@ -50,6 +50,11 @@
   /* Free items: show the FULL image (no cropping), capped height */
   .card.free .imgbox{aspect-ratio:auto; height:auto; padding:12px;}
   .card.free .imgbox img{width:auto; height:auto; max-width:100%; max-height:300px; object-fit:contain;}
+  /* extra detail photos */
+  .thumbs{display:flex; gap:8px; padding:10px 16px 0; flex-wrap:wrap;}
+  .thumbs figure{margin:0; text-align:center;}
+  .thumbs img{width:72px; height:72px; object-fit:cover; border-radius:8px; border:1px solid var(--line); display:block;}
+  .thumbs figcaption{font-size:.7rem; color:var(--muted); margin-top:3px;}
   .card .body{padding:14px 16px 16px;}
   .card h2{margin:0 0 8px; font-size:1.15rem;}
   .card .desc{color:var(--muted); font-size:.92rem; margin:0 0 12px;}
@@ -117,6 +122,10 @@
 
       <div class="card">
         <div class="imgbox"><img src="images/piano_1.jpeg" alt="Yamaha C3 grand piano 雅马哈C3三角钢琴"></div>
+        <div class="thumbs">
+          <figure><a href="images/piano_2.jpeg" target="_blank" rel="noopener"><img src="images/piano_2.jpeg" alt="Key wood detail 琴键木头细节"></a><figcaption>琴键细节 · Keys</figcaption></figure>
+          <figure><a href="images/piano_number.jpeg" target="_blank" rel="noopener"><img src="images/piano_number.jpeg" alt="Serial number 编码"></a><figcaption>编码 · Serial</figcaption></figure>
+        </div>
         <div class="body">
           <h2>Yamaha C3 Grand Piano · 雅马哈 C3 三角钢琴</h2>
           <p class="desc">
@@ -135,6 +144,9 @@
 
       <div class="card">
         <div class="imgbox"><img src="images/小冰箱_1.jpeg" alt="Mini fridge 小冰箱"></div>
+        <div class="thumbs">
+          <figure><a href="images/小冰箱_2.jpeg" target="_blank" rel="noopener"><img src="images/小冰箱_2.jpeg" alt="Mini fridge photo 2 小冰箱"></a><figcaption>另一张 · More</figcaption></figure>
+        </div>
         <div class="body">
           <h2>Mini Fridge · 小冰箱</h2>
           <div class="meta">
@@ -146,6 +158,9 @@
 
       <div class="card">
         <div class="imgbox"><img src="images/冰柜0.jpeg.jpeg" alt="Refrigerator with freezer 冰箱冷冻"></div>
+        <div class="thumbs">
+          <figure><a href="images/冰柜1.jpeg" target="_blank" rel="noopener"><img src="images/冰柜1.jpeg" alt="Refrigerator photo 2 冰箱"></a><figcaption>另一张 · More</figcaption></figure>
+        </div>
         <div class="body">
           <h2>Refrigerator (with Freezer) · 冰箱（冷冻）</h2>
           <p class="desc">
@@ -165,21 +180,6 @@
           <h2>Freezer · 冰柜</h2>
           <div class="meta">
             <span class="price">$20</span>
-            <span class="badge avail">Available 可购</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="imgbox"><img src="images/microwave.jpeg" alt="Microwave 微波炉"></div>
-        <div class="body">
-          <h2>Microwave · 微波炉</h2>
-          <p class="desc">
-            1000 W high power.<br>
-            1000 瓦大功率。
-          </p>
-          <div class="meta">
-            <span class="price">$30</span>
             <span class="badge avail">Available 可购</span>
           </div>
         </div>
