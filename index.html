@@ -66,6 +66,8 @@
   }
   .avail{background:#dcfce7; color:#166534;}
   .sold{background:#fee2e2; color:var(--sold);}
+  .card.is-sold{opacity:.6;}
+  .card.is-sold .imgbox img{filter:grayscale(70%);}
 
   footer{text-align:center; color:var(--muted); font-size:.85rem; padding:0 20px 40px;}
 </style>
@@ -110,13 +112,13 @@
         </div>
       </div>
 
-      <div class="card free">
+      <div class="card free is-sold">
         <div class="imgbox"><img src="images/竹鞋架.jpeg" alt="Bamboo shoe rack 竹鞋架"></div>
         <div class="body">
           <h2>Bamboo Shoe Rack · 竹鞋架</h2>
           <div class="meta">
             <span class="price">Free · 免费</span>
-            <span class="badge avail">Available 可拿</span>
+            <span class="badge sold">Sold 已出</span>
           </div>
         </div>
       </div>
@@ -276,6 +278,36 @@
       </div>
 
       <div class="card">
+        <div class="imgbox"><img src="images/sofa_green.jpeg" alt="Green sofa 绿色沙发"></div>
+        <div class="body">
+          <h2>Green Sofa · 绿色沙发</h2>
+          <p class="desc">
+            Great quality and sturdy — pull-out steel-frame bed inside, converts to a bed.<br>
+            质量超好、很沉，内部有钢丝床架，可拉开当床用。
+          </p>
+          <div class="meta">
+            <span class="price">$30</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/sofa_gray.jpeg" alt="Gray sofa 灰色沙发"></div>
+        <div class="body">
+          <h2>Gray Sofa · 灰色沙发</h2>
+          <p class="desc">
+            Backrest folds down to use as a bed.<br>
+            后背可放倒，当床用。
+          </p>
+          <div class="meta">
+            <span class="price">$7</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
         <div class="imgbox"><img src="images/chair.jpeg" alt="Black plastic chairs 黑色塑料椅"></div>
         <div class="thumbs">
           <figure><a href="images/chair_crack.jpeg" target="_blank" rel="noopener"><img src="images/chair_crack.jpeg" alt="Crack detail 裂纹细节"></a><figcaption>裂纹 · Crack</figcaption></figure>
@@ -355,7 +387,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card is-sold">
         <div class="imgbox"><img src="images/bike.jpeg" alt="Spin bike 动感单车"></div>
         <div class="body">
           <h2>Spin Bike · 动感单车</h2>
@@ -367,7 +399,7 @@
           </p>
           <div class="meta">
             <span class="price">$80</span>
-            <span class="badge avail">Available 可购</span>
+            <span class="badge sold">Sold 已出</span>
           </div>
         </div>
       </div>
@@ -390,13 +422,13 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card is-sold">
         <div class="imgbox"><img src="images/drawer_3.jpeg" alt="3-tier drawer 三层抽屉"></div>
         <div class="body">
-          <h2>3-Tier Drawer (×1) · 三层抽屉（1个）</h2>
+          <h2>3-Tier Drawer (×4) · 三层抽屉（4个）</h2>
           <div class="meta">
-            <span class="price">$8</span>
-            <span class="badge avail">Available 可购</span>
+            <span class="price">$8 each · $8/个</span>
+            <span class="badge sold">Sold 已出</span>
           </div>
         </div>
       </div>
@@ -416,6 +448,10 @@
         <div class="imgbox"><img src="images/drawer_9.jpeg" alt="9-tier drawer 9层抽屉"></div>
         <div class="body">
           <h2>9-Tier Drawer (×9) · 9层抽屉（9个）</h2>
+          <p class="desc">
+            2 sold, 7 left.<br>
+            已出 2 个，剩 7 个。
+          </p>
           <div class="meta">
             <span class="price">$10 each · $10/个</span>
             <span class="badge avail">Available 可购</span>
@@ -423,13 +459,13 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card is-sold">
         <div class="imgbox"><img src="images/柜子.jpeg" alt="Cabinet 柜子"></div>
         <div class="body">
           <h2>Cabinet · 柜子</h2>
           <div class="meta">
             <span class="price">$8</span>
-            <span class="badge avail">Available 可购</span>
+            <span class="badge sold">Sold 已出</span>
           </div>
         </div>
       </div>
