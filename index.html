@@ -48,8 +48,8 @@
   .card .imgbox img{width:100%; height:100%; object-fit:cover;}
   .card.wide{grid-column:1 / -1;}
   /* Free items: show the FULL image (no cropping), capped height */
-  .card.free .imgbox{aspect-ratio:auto; height:auto; padding:12px;}
-  .card.free .imgbox img{width:auto; height:auto; max-width:100%; max-height:300px; object-fit:contain;}
+  .card.free .imgbox, .card.fit .imgbox{aspect-ratio:auto; height:auto; padding:12px;}
+  .card.free .imgbox img, .card.fit .imgbox img{width:auto; height:auto; max-width:100%; max-height:300px; object-fit:contain;}
   /* extra detail photos */
   .thumbs{display:flex; gap:8px; padding:10px 16px 0; flex-wrap:wrap;}
   .thumbs figure{margin:0; text-align:center;}
@@ -101,13 +101,13 @@
         </div>
       </div>
 
-      <div class="card free">
+      <div class="card free is-sold">
         <div class="imgbox"><img src="images/健身凳.jpeg" alt="Fitness bench 健身凳"></div>
         <div class="body">
           <h2>Fitness Bench · 健身凳</h2>
           <div class="meta">
             <span class="price">Free · 免费</span>
-            <span class="badge avail">Available 可拿</span>
+            <span class="badge sold">Sold 已出</span>
           </div>
         </div>
       </div>
@@ -150,6 +150,32 @@
           <p class="desc">
             Fabric surface is torn in places.<br>
             表面布料有破损。
+          </p>
+          <div class="meta">
+            <span class="price">Free · 免费</span>
+            <span class="badge avail">Available 可拿</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card free">
+        <div class="imgbox"><img src="images/Sofa_White.jpeg" alt="White sofa 白色沙发"></div>
+        <div class="body">
+          <h2>White Sofa · 白色沙发</h2>
+          <div class="meta">
+            <span class="price">Free · 免费</span>
+            <span class="badge avail">Available 可拿</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card free">
+        <div class="imgbox"><img src="images/sofa_gray.jpeg" alt="Gray sofa 灰色沙发"></div>
+        <div class="body">
+          <h2>Gray Sofa · 灰色沙发</h2>
+          <p class="desc">
+            Backrest folds down to use as a bed.<br>
+            后背可放倒，当床用。
           </p>
           <div class="meta">
             <span class="price">Free · 免费</span>
@@ -218,13 +244,13 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card is-sold">
         <div class="imgbox"><img src="images/冰柜.jpeg" alt="Chest freezer 冰柜"></div>
         <div class="body">
           <h2>Freezer · 冰柜</h2>
           <div class="meta">
             <span class="price">$10</span>
-            <span class="badge avail">Available 可购</span>
+            <span class="badge sold">Sold 已出</span>
           </div>
         </div>
       </div>
@@ -277,7 +303,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card is-sold">
         <div class="imgbox"><img src="images/茶桌.jpeg" alt="Wooden tea table 木质茶桌"></div>
         <div class="body">
           <h2>Wooden Tea Table · 木质茶桌</h2>
@@ -287,18 +313,7 @@
           </p>
           <div class="meta">
             <span class="price">$5</span>
-            <span class="badge avail">Available 可购</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="imgbox"><img src="images/Sofa_White.jpeg" alt="White sofa 白色沙发"></div>
-        <div class="body">
-          <h2>White Sofa · 白色沙发</h2>
-          <div class="meta">
-            <span class="price">Free · 免费</span>
-            <span class="badge avail">Available 可拿</span>
+            <span class="badge sold">Sold 已出</span>
           </div>
         </div>
       </div>
@@ -314,21 +329,6 @@
           <div class="meta">
             <span class="price">$30</span>
             <span class="badge avail">Available 可购</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="imgbox"><img src="images/sofa_gray.jpeg" alt="Gray sofa 灰色沙发"></div>
-        <div class="body">
-          <h2>Gray Sofa · 灰色沙发</h2>
-          <p class="desc">
-            Backrest folds down to use as a bed.<br>
-            后背可放倒，当床用。
-          </p>
-          <div class="meta">
-            <span class="price">Free · 免费</span>
-            <span class="badge avail">Available 可拿</span>
           </div>
         </div>
       </div>
@@ -403,7 +403,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card fit">
         <div class="imgbox"><img src="images/elgato.jpg" alt="Elgato retractable green screen Elgato 可收缩幕布"></div>
         <div class="thumbs">
           <figure><a href="images/elgato_1.jpeg" target="_blank" rel="noopener"><img src="images/elgato_1.jpeg" alt="Elgato photo 2"></a><figcaption>实拍 · Photo</figcaption></figure>
@@ -440,7 +440,7 @@
       </div>
 
       <div class="card">
-        <div class="imgbox"><div style="color:var(--muted);font-size:.9rem;">图片待补 · Photo coming</div></div>
+        <div class="imgbox"><img src="images/dell.jpeg" alt="DELL 23-inch monitor DELL 显示器"></div>
         <div class="body">
           <h2>DELL 23&quot; Monitor · DELL 23寸显示器</h2>
           <p class="desc">
@@ -456,7 +456,7 @@
       <!-- ===== FITNESS 健身器材 ===== -->
       <h2 class="section-head">健身器材 <span class="en">· Fitness</span></h2>
 
-      <div class="card">
+      <div class="card is-sold">
         <div class="imgbox"><img src="images/treadmill.jpg" alt="Foldable treadmill 折叠跑步机"></div>
         <div class="body">
           <h2>Foldable Treadmill · 折叠跑步机</h2>
@@ -468,7 +468,7 @@
           </p>
           <div class="meta">
             <span class="price">$90</span>
-            <span class="badge avail">Available 可购</span>
+            <span class="badge sold">Sold 已出</span>
           </div>
         </div>
       </div>
