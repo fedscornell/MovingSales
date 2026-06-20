@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moving Sale 搬家清仓</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --ink:#1f2933; --muted:#6b7280;
+    --accent:#2563eb; --line:#e5e7eb; --price:#16a34a; --sold:#dc2626;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+      "Helvetica Neue","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.55;
+  }
+  header{
+    text-align:center; padding:36px 20px 20px;
+  }
+  header h1{margin:0 0 6px; font-size:1.9rem;}
+  header p{margin:0; color:var(--muted);}
+  .wrap{max-width:920px; margin:0 auto; padding:10px 16px 60px;}
+
+  /* card grid (good for phones) */
+  .grid{display:grid; grid-template-columns:1fr; gap:18px;}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr;}}
+
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    overflow:hidden; display:flex; flex-direction:column;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);
+  }
+  .card .imgbox{
+    background:#f0f1f3; display:flex; align-items:center; justify-content:center;
+    aspect-ratio:4/3; overflow:hidden;
+  }
+  .card .imgbox img{width:100%; height:100%; object-fit:cover;}
+  .card .body{padding:14px 16px 16px;}
+  .card h2{margin:0 0 8px; font-size:1.15rem;}
+  .card .desc{color:var(--muted); font-size:.92rem; margin:0 0 12px;}
+  .card .desc a{color:var(--accent); word-break:break-all;}
+  .meta{display:flex; align-items:center; justify-content:space-between; gap:10px;}
+  .price{color:var(--price); font-weight:700; font-size:1.15rem;}
+  .badge{
+    font-size:.78rem; padding:3px 10px; border-radius:999px; font-weight:600;
+  }
+  .avail{background:#dcfce7; color:#166534;}
+  .sold{background:#fee2e2; color:var(--sold);}
+
+  footer{text-align:center; color:var(--muted); font-size:.85rem; padding:0 20px 40px;}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Moving Sale · 搬家清仓</h1>
+    <p>Everything must go · 价格可议，先到先得</p>
+  </header>
+
+  <div class="wrap">
+    <div class="grid">
+
+      <div class="card">
+        <div class="imgbox"><img src="images/treadmill.jpg" alt="Foldable treadmill 折叠跑步机"></div>
+        <div class="body">
+          <h2>Foldable Treadmill · 折叠跑步机</h2>
+          <p class="desc">
+            Foldable for easy storage, great for walking or running at home.
+            Similar used models go for $200+ online.<br>
+            可折叠收纳，不占地方，适合在家走路、跑步。网上同款二手基本 $200+。<br>
+            <a href="https://www.fitnesswarehousedeals.com/equipment/218" target="_blank" rel="noopener">Specs / 参数参考</a>
+          </p>
+          <div class="meta">
+            <span class="price">$90</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/spin-bike.jpg" alt="Spin bike 动感单车"></div>
+        <div class="body">
+          <h2>Spin Bike · 动感单车</h2>
+          <p class="desc">
+            Smooth ride, good for daily cardio.
+            Similar used models go for $600+ online.<br>
+            骑行顺畅，适合日常有氧运动。网上同款二手基本 $600+。<br>
+            <a href="https://www.ebay.com/itm/275554379980" target="_blank" rel="noopener">Reference / 参考信息</a>
+          </p>
+          <div class="meta">
+            <span class="price">$80</span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox"><img src="images/shoe-rack.jpg" alt="11-tier shoe rack 11层鞋架"></div>
+        <div class="body">
+          <h2>11-Tier Shoe Rack (×2) · 11层鞋架（两个）</h2>
+          <p class="desc">
+            1 m wide, 11 tiers each.<br>
+            宽 1 米，每个 11 层。
+          </p>
+          <div class="meta">
+            <span class="price">$15 each · $30 for both<br><span style="font-weight:400;color:var(--muted);font-size:.85rem">$15/个，$30 两个</span></span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    Contact me if interested · 有兴趣请联系我
+  </footer>
+</body>
+</html>
