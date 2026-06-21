@@ -68,6 +68,7 @@
   .sold{background:#fee2e2; color:var(--sold);}
   .card.is-sold{opacity:.6;}
   .card.is-sold .imgbox img{filter:grayscale(70%);}
+  .freebie{color:#c2410c; font-weight:700; background:#fff7ed; padding:1px 6px; border-radius:6px;}
 
   footer{text-align:center; color:var(--muted); font-size:.85rem; padding:0 20px 40px;}
 </style>
@@ -137,7 +138,7 @@
             <a href="https://www.amazon.com/dp/B0B9KC1D22" target="_blank" rel="noopener">Amazon 页面</a>
           </p>
           <div class="meta">
-            <span class="price">$5<br><span style="font-weight:400;color:var(--muted);font-size:.8rem">买其他东西可免费送 · Free with another buy</span></span>
+            <span class="price">$5<br><span class="freebie">买其他东西可免费送 · Free with another buy</span></span>
             <span class="badge avail">Available 可购</span>
           </div>
         </div>
@@ -210,15 +211,15 @@
       <!-- ===== APPLIANCES 家电 (fridges grouped) ===== -->
       <h2 class="section-head">家电 <span class="en">· Appliances</span></h2>
 
-      <div class="card">
-        <div class="imgbox"><img src="images/小冰箱_1.jpeg" alt="Mini fridge 小冰箱"></div>
+      <div class="card fit">
+        <div class="imgbox"><img src="images/小冰箱_1.jpeg" alt="Mini fridge 小冰箱" style="max-height:200px;"></div>
         <div class="thumbs">
           <figure><a href="images/小冰箱_2.jpeg" target="_blank" rel="noopener"><img src="images/小冰箱_2.jpeg" alt="Mini fridge photo 2 小冰箱"></a><figcaption>另一张 · More</figcaption></figure>
         </div>
         <div class="body">
           <h2>Mini Fridge · 小冰箱</h2>
           <div class="meta">
-            <span class="price">$35</span>
+            <span class="price">$30</span>
             <span class="badge avail">Available 可购</span>
           </div>
         </div>
@@ -231,14 +232,14 @@
           <figure><a href="images/freezer_web.jpeg" target="_blank" rel="noopener"><img src="images/freezer_web.jpeg" alt="Refrigerator reference 冰箱参考图"></a><figcaption>参考图 · Ref</figcaption></figure>
         </div>
         <div class="body">
-          <h2>Refrigerator (with Freezer) · 冰箱（冷冻）</h2>
+          <h2>Freezer · 冷冻</h2>
           <p class="desc">
             One small surface scratch from delivery — doesn't affect use.<br>
             表面有一处划痕，不影响正常使用（新买时纸箱搬运中剐蹭所致）。<br>
             <a href="https://www.bestbuy.com/product/insignia-7-1-cu-ft-garage-ready-upright-convertible-freezer-stainless-steel-look/J2FPJK9PCJ/sku/6634899" target="_blank" rel="noopener">Details / 详情 (Best Buy)</a>
           </p>
           <div class="meta">
-            <span class="price">$45</span>
+            <span class="price">$40</span>
             <span class="badge avail">Available 可购</span>
           </div>
         </div>
@@ -327,7 +328,7 @@
             质量超好、很沉，内部有钢丝床架，可拉开当床用。
           </p>
           <div class="meta">
-            <span class="price">$30</span>
+            <span class="price">$20</span>
             <span class="badge avail">Available 可购</span>
           </div>
         </div>
@@ -345,7 +346,7 @@
             其中一把椅背有裂纹，正常可用，但不建议大力后靠。
           </p>
           <div class="meta">
-            <span class="price">$5 for both · $3 each<br><span style="font-weight:400;color:var(--muted);font-size:.85rem">两个 $5 · 一个 $3</span></span>
+            <span class="price">$5 for both · $3 each<br><span style="font-weight:400;color:var(--muted);font-size:.85rem">两个 $5 · 一个 $3 · </span><span class="freebie">或买东西免费送</span></span>
             <span class="badge avail">Available 可购</span>
           </div>
         </div>
@@ -375,7 +376,7 @@
             有猫毛，椅套可拆洗。
           </p>
           <div class="meta">
-            <span class="price">$5 for both · 两把 $5</span>
+            <span class="price">$5 for both · 两把 $5<br><span class="freebie">或买东西免费送 · Free with a purchase</span></span>
             <span class="badge avail">Available 可购</span>
           </div>
         </div>
@@ -390,7 +391,7 @@
             可调节高度（手动，非电动），下方可放跑步机或走步机。
           </p>
           <div class="meta">
-            <span class="price">$5<br><span style="font-weight:400;color:var(--muted);font-size:.8rem">买东西免费送 · Free with a purchase</span></span>
+            <span class="price">$5<br><span class="freebie">买东西免费送 · Free with a purchase</span></span>
             <span class="badge avail">Available 可购</span>
           </div>
         </div>
@@ -399,8 +400,8 @@
       <!-- ===== OFFICE 办公 ===== -->
       <h2 class="section-head">办公 <span class="en">· Office &amp; Studio</span></h2>
 
-      <div class="card">
-        <div class="imgbox"><img src="images/chair_black.jpeg" alt="Adjustable office chair 升降椅"></div>
+      <div class="card fit">
+        <div class="imgbox"><img src="images/chair_black.jpeg" alt="Adjustable office chair 升降椅" style="max-height:200px;"></div>
         <div class="thumbs">
           <figure><a href="images/chair_amazon.jpg" target="_blank" rel="noopener"><img src="images/chair_amazon.jpg" alt="Chair reference 升降椅参考图"></a><figcaption>参考图 · Ref</figcaption></figure>
         </div>
@@ -571,13 +572,13 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card is-sold">
         <div class="imgbox"><img src="images/九宫格.jpeg" alt="9-cube organizer 九宫格"></div>
         <div class="body">
           <h2>9-Cube Organizer · 九宫格</h2>
           <div class="meta">
             <span class="price">$10</span>
-            <span class="badge avail">Available 可购</span>
+            <span class="badge sold">Sold 已出</span>
           </div>
         </div>
       </div>
@@ -602,7 +603,7 @@
             其中一个有小瑕疵：横向的架子不太牢固。
           </p>
           <div class="meta">
-            <span class="price">$3 for both · 两个 $3</span>
+            <span class="price">$5 for both · 两个 $5<br><span class="freebie">或买东西免费送 · Free with a purchase</span></span>
             <span class="badge avail">Available 可购</span>
           </div>
         </div>
