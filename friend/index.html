@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Friend's Sale 朋友寄售</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --ink:#1f2933; --muted:#6b7280;
+    --accent:#2563eb; --line:#e5e7eb; --price:#16a34a; --sold:#dc2626;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+      "Helvetica Neue","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.55;
+  }
+  header{
+    text-align:center; padding:36px 20px 20px;
+  }
+  header h1{margin:0 0 6px; font-size:1.9rem;}
+  header p{margin:0; color:var(--muted);}
+  header .tagline{line-height:1.7;}
+  header .tagline strong{color:var(--price); font-size:1.15rem;}
+  .wrap{max-width:920px; margin:0 auto; padding:10px 16px 60px;}
+
+  .grid{display:grid; grid-template-columns:1fr; gap:18px;}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr;}}
+
+  .section-head{
+    grid-column:1 / -1; margin:18px 0 -4px; padding-bottom:6px;
+    border-bottom:2px solid var(--line); font-size:1.15rem; font-weight:700;
+  }
+  .section-head:first-child{margin-top:0;}
+  .section-head .en{color:var(--muted); font-weight:600; font-size:.95rem;}
+
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    overflow:hidden; display:flex; flex-direction:column;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);
+  }
+  .card .imgbox{
+    background:#f0f1f3; display:flex; align-items:center; justify-content:center;
+    aspect-ratio:4/3; overflow:hidden;
+  }
+  .card .imgbox img{width:100%; height:100%; object-fit:cover;}
+  .card.wide{grid-column:1 / -1;}
+  .card.free .imgbox, .card.fit .imgbox{aspect-ratio:auto; height:auto; padding:12px;}
+  .card.free .imgbox img, .card.fit .imgbox img{width:auto; height:auto; max-width:100%; max-height:300px; object-fit:contain;}
+  .thumbs{display:flex; gap:8px; padding:10px 16px 0; flex-wrap:wrap;}
+  .thumbs figure{margin:0; text-align:center;}
+  .thumbs img{width:72px; height:72px; object-fit:cover; border-radius:8px; border:1px solid var(--line); display:block;}
+  .thumbs figcaption{font-size:.7rem; color:var(--muted); margin-top:3px;}
+  .card .body{padding:14px 16px 16px;}
+  .card h2{margin:0 0 8px; font-size:1.15rem;}
+  .card .desc{color:var(--muted); font-size:.92rem; margin:0 0 12px;}
+  .card .desc a{color:var(--accent); word-break:break-all;}
+  .meta{display:flex; align-items:center; justify-content:space-between; gap:10px;}
+  .price{color:var(--price); font-weight:700; font-size:1.15rem;}
+  .price.blank{display:inline-block; min-width:72px;}
+  .badge{
+    font-size:.78rem; padding:3px 10px; border-radius:999px; font-weight:600;
+  }
+  .avail{background:#dcfce7; color:#166534;}
+  .sold{background:#fee2e2; color:var(--sold);}
+  .card.is-sold{opacity:.6;}
+  .card.is-sold .imgbox img{filter:grayscale(70%);}
+  .freebie{color:#c2410c; font-weight:700; background:#fff7ed; padding:1px 6px; border-radius:6px;}
+
+  footer{text-align:center; color:var(--muted); font-size:.85rem; padding:0 20px 40px;}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Friend's Items</h1>
+    <p class="tagline"><strong>朋友寄售，暂未标价。<br>如需更多照片、尺寸或细节，欢迎联系。<br>先到先得，尽量预留。</strong></p>
+  </header>
+
+  <div class="wrap">
+    <div class="grid">
+
+      <h2 class="section-head">客厅家具 <span class="en">· Living Room</span></h2>
+
+      <div class="card wide fit">
+        <div class="imgbox"><img src="../images/friend/leather_sofa_1.jpg" alt="Blue-gray leather sofa 灰蓝皮沙发"></div>
+        <div class="thumbs">
+          <figure><a href="../images/friend/leather_sofa_2.jpg" target="_blank" rel="noopener"><img src="../images/friend/leather_sofa_2.jpg" alt="Leather sofa second angle 灰蓝皮沙发角度二"></a><figcaption>角度 2</figcaption></figure>
+          <figure><a href="../images/friend/leather_sofa_3.jpg" target="_blank" rel="noopener"><img src="../images/friend/leather_sofa_3.jpg" alt="Leather sofa third angle 灰蓝皮沙发角度三"></a><figcaption>角度 3</figcaption></figure>
+          <figure><a href="../images/friend/leather_sofa_4.jpg" target="_blank" rel="noopener"><img src="../images/friend/leather_sofa_4.jpg" alt="Leather sofa fourth angle 灰蓝皮沙发角度四"></a><figcaption>角度 4</figcaption></figure>
+        </div>
+        <div class="body">
+          <h2>Blue-Gray Leather Sofa · 灰蓝皮沙发</h2>
+          <p class="desc">
+            Soft, low-profile sofa with roomy cushions and a clean, modern silhouette.<br>
+            坐垫宽松、轮廓利落的皮沙发，日常坐感舒适，也比较百搭。
+          </p>
+          <div class="meta">
+            <span class="price blank"></span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card fit">
+        <div class="imgbox"><img src="../images/friend/sideboard_1.jpg" alt="Wood sideboard 实木餐边柜"></div>
+        <div class="thumbs">
+          <figure><a href="../images/friend/sideboard_2.jpg" target="_blank" rel="noopener"><img src="../images/friend/sideboard_2.jpg" alt="Wood sideboard second angle 实木餐边柜另一角度"></a><figcaption>另一张 · More</figcaption></figure>
+        </div>
+        <div class="body">
+          <h2>Wood Sideboard · 实木餐边柜</h2>
+          <p class="desc">
+            Drawer-and-door storage that works well in a dining room, hallway, or entry.<br>
+            抽屉加柜门收纳，放在餐厅、走廊或玄关都很合适。
+          </p>
+          <div class="meta">
+            <span class="price blank"></span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-head">餐桌家具 <span class="en">· Dining</span></h2>
+
+      <div class="card wide fit">
+        <div class="imgbox"><img src="../images/friend/dining_set_1.jpg" alt="Dining table set 餐桌椅组合"></div>
+        <div class="thumbs">
+          <figure><a href="../images/friend/dining_set_2.jpg" target="_blank" rel="noopener"><img src="../images/friend/dining_set_2.jpg" alt="Dining table set second angle 餐桌椅组合另一角度"></a><figcaption>另一张 · More</figcaption></figure>
+          <figure><a href="../images/friend/dining_set_chair.jpg" target="_blank" rel="noopener"><img src="../images/friend/dining_set_chair.jpg" alt="Dining chair detail 餐椅细节"></a><figcaption>椅子 · Chair</figcaption></figure>
+        </div>
+        <div class="body">
+          <h2>Dining Table Set · 实木餐桌椅组合</h2>
+          <p class="desc">
+            Warm wood dining set with matching chairs, great for an everyday dining nook.<br>
+            温润木色餐桌椅组合，适合日常用餐，也很适合布置餐厨角落。
+          </p>
+          <div class="meta">
+            <span class="price blank"></span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-head">家电 <span class="en">· Appliances</span></h2>
+
+      <div class="card fit">
+        <div class="imgbox"><img src="../images/friend/air_fryer.jpg" alt="Philips air fryer 飞利浦空气炸锅"></div>
+        <div class="body">
+          <h2>Philips Air Fryer · 飞利浦空气炸锅</h2>
+          <p class="desc">
+            Compact countertop size for quick meals, snacks, or reheating.<br>
+            台面尺寸友好，适合做快手餐、小食或日常复热。
+          </p>
+          <div class="meta">
+            <span class="price blank"></span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-head">数码办公 <span class="en">· Office &amp; Tech</span></h2>
+
+      <div class="card fit">
+        <div class="imgbox"><img src="../images/friend/sony_receiver_front.jpg" alt="Sony stereo receiver 索尼功放"></div>
+        <div class="thumbs">
+          <figure><a href="../images/friend/sony_receiver_label.jpg" target="_blank" rel="noopener"><img src="../images/friend/sony_receiver_label.jpg" alt="Sony receiver model label 索尼功放型号"></a><figcaption>型号 · Model</figcaption></figure>
+        </div>
+        <div class="body">
+          <h2>Sony Stereo Receiver · 索尼功放</h2>
+          <p class="desc">
+            Model label shows STR-DH190. Great for a simple speaker setup, vinyl, or TV audio.<br>
+            背标可见型号 STR-DH190，适合音箱、黑胶或电视音频系统。
+          </p>
+          <div class="meta">
+            <span class="price blank"></span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card fit">
+        <div class="imgbox"><img src="../images/friend/monitor_stand_1.jpg" alt="Monitor riser or small TV stand 显示器增高架"></div>
+        <div class="thumbs">
+          <figure><a href="../images/friend/monitor_stand_2.jpg" target="_blank" rel="noopener"><img src="../images/friend/monitor_stand_2.jpg" alt="Monitor riser second angle 显示器增高架另一角度"></a><figcaption>另一张 · More</figcaption></figure>
+        </div>
+        <div class="body">
+          <h2>Monitor Riser / Small TV Stand · 显示器增高架 / 小电视架</h2>
+          <p class="desc">
+            Compact stand with a lower shelf to keep a desk or media corner tidy.<br>
+            带下层收纳的小架子，适合桌面或小型影音角落。
+          </p>
+          <div class="meta">
+            <span class="price blank"></span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-head">其他 <span class="en">· Misc</span></h2>
+
+      <div class="card fit">
+        <div class="imgbox"><img src="../images/friend/mini_basketball_hoop.jpg" alt="Mini basketball hoop 迷你篮球框"></div>
+        <div class="body">
+          <h2>Mini Basketball Hoop · 迷你篮球框</h2>
+          <p class="desc">
+            Door-mounted hoop for a home office, kids' room, or casual indoor play.<br>
+            可挂门使用，适合书房、儿童房或室内随手投投球。
+          </p>
+          <div class="meta">
+            <span class="price blank"></span>
+            <span class="badge avail">Available 可购</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    欢迎联系：<br>
+    WeChat 微信: <strong>JingYiHarper</strong> &nbsp;·&nbsp; Email 邮箱: <a href="mailto:jing@jing-yi.org">jing@jing-yi.org</a><br>
+    <span style="opacity:.75;">价格待补充 · More items can be added later</span>
+  </footer>
+</body>
+</html>
